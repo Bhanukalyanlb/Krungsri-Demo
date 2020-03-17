@@ -1,10 +1,10 @@
-import { from } from 'rxjs';
+import {from} from 'rxjs';
 
-import { ContactService } from './../contact.service';
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Contact } from './Contact';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import {ContactService} from './../contact.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Contact} from './Contact';
+import {FormGroup, FormBuilder} from '@angular/forms';
 // import { HttpClientService } from '../service/http-client.service';
 // import { ContactFormComponent } from './contactform/contactform.component';
 
@@ -16,77 +16,39 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class ContactformComponent implements OnInit {
 
-  contacts:string[];
+  contacts: Contact[];
   fb: any;
 
   constructor(
-  // public router:Router, public fb: FormBuilder,
-  // private contactService:ContactService,
+    public router: Router,
+    private contactService: ContactService
+  ) {
+  }
 
-  private contactService: ContactService
-
-    ) { }
-
- 
-
-  contactForm: FormGroup;
-  contactModel = new Contact();
+  contactModel: Contact;
 
   ngOnInit() {
-    this.createContactForm();
+    this.contactModel = new Contact();
     this.getData();
-}
+  }
 
-  getData(){
-this.contactService.getContacts().subscribe(
-  (Response) => this.handleSuccessfulResponse(Response),
-  
-);
+  getData() {
+    console.log('xxxx');
+    this.contactService.getContacts().subscribe(
+      (Response) => this.handleSuccessfulResponse(Response),
+    );
   }
 
   // onSubmitClick() {
-    public onSubmitClick(){
-
-  
-
-    this.contactModel.name = this.getField('name').value;
-    this.contactModel.country = this.getField('country').value;
-    this.contactModel.subject = this.getField('subject').value;
+  public onSubmitClick() {
+    alert('Your message has been sent');
     console.log(this.contactModel);
-
-      // this.contactform.contactName = this.getField('name').value;
-      // this.contactform.country = this.getField('country').value;
-
-      // this.animalService.addAnimal(this.animal).then((res) => {
-      //   console.log(res);
-      //   this.utils.resetFormGroup(this.form);
-      // }).catch((error) => {
-      //   console.log(error);
-      // });
-
-    
-        // this.router.navigate(['/dashboard']);
-    }
-  
-
-  createContactForm() {
-    this.contactForm = this.fb.group({
-      contactId: [''],
-      name: [''],
-      country: [''],
-      subject: ['']
-    });
+    this.router.navigateByUrl('/dashboard');
   }
 
-  get validateForm() { return this.contactForm.valid; }
 
-  getField(name: any) {
-    return this.contactForm.get(name);
+  handleSuccessfulResponse(response) {
+    this.contacts = response;
   }
-
-  handleSuccessfulResponse(response)
-{
-    this.contacts=response;
-}
 
 }

@@ -34,7 +34,7 @@ const routes: Routes = [
       {path:"Logout", component:LogoutComponent},
       {path:"Login", redirectTo:"/dashboard", pathMatch:"full"},
       {path:"Contactform", component:ContactformComponent},
-      { path: 'Contactform', redirectTo: '/dashboard', pathMatch: 'full'},
+      // { path: 'Contactform', redirectTo: '/dashboard', pathMatch: 'full'},
       {path:"Personalbanking", component:PersonalbankingComponent},
       { path: 'Login', redirectTo: '/dashboard', pathMatch: 'full'}
     ]
