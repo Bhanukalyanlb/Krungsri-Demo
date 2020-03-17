@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo-app';
+
+
+  // toggleNavbar() {
+  //   this.navBurger.nativeElement.classList.toggle('is-active');
+  //   this.navMenu.nativeElement.classList.toggle('is-active');
+  // }
+
+  title: string;
+ 
+  constructor() {
+    this.title = 'demo-app';
+  }
+
 }

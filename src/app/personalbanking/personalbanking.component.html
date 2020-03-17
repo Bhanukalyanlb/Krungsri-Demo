@@ -1,0 +1,171 @@
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: rgba(255, 188, 4, 0.87);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div nav class="navbar navbar-light bg-light" class="header">
+    <img src="assets/krngsrilogo.jpg" alt="" usemap="#workmap" width="250" height="200"
+      style="margin:auto; display: block;">
+  <h3>Krungsri Personal Banking Information</h3>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Krungsri Jad Hai Savings Account</h2>
+      <h5>Get more than ‘FREE’ with Krungsri Jad Hai Savings Account and Jad Hai Debit Card</h5>
+        <div><img src="assets/jadhaisavings.jpg" alt="" style="height:260px;"></div>
+
+        <!-- <map name="workmap">
+                <area shape="rect" coords="571 300" alt="Krungsri.com" href="https://www.krungsri.com/bank/en/home.html" target="_blank">
+              </map> -->
+        
+      <h4>Terms & Conditions for Krungsri Jad Hai Savings Account and Krungsri Jad Hai Debit Card</h4>
+      <p>FREE and UNLIMITED immediate interbank transfers and PROMPTPAY transfers via the Krungsri Mobile Application (KMA), Krungsri Online (KOL) and Krungsri Biz Online (KBOL) and all Krungsri ATM machines.</p>
+    <p>FREE and UNLIMITED interprovincial transfers, bill payment transactions, and top-up transactions via KMA, KOL, KBOL, Krungsri ATM machines, and all Krungsri Bank branches</p>
+    <p>FREE and UNLIMITED cash withdrawals and checking of account balances at ATM machines of ANY bank nationwide.</p>  
+</div>
+
+    <div class="card">
+      <h2>Cheque Clearing Service</h2>
+      <h4>Krungsri have normal cheque clearance and image cheque clearance services.</h4>
+      <div>
+          <img src="assets/chequeclearance.jpg" alt="" style="height:170px;">
+        </div>
+      <p>You have many plans and benefits in this Cheque Clearance Services. Krungsri provides two types of servies
+        <li><a href="https://www.krungsri.com/bank/en/PersonalBanking/DepositProducts/ChequeClearingService.html"> Cheque Clearing Service</a></li>  
+        
+        <li><a href="https://www.krungsri.com/bank/en/PersonalBanking/DepositProducts/KrungsriImagechequeclearingservice.html">ICAS: Image Cheque Clearing and Archive System</a></li>  
+      </p>
+      <p>209 branches under the clearing house in Bangkok provide check clearing service until 3:00 p.m.</p>
+      
+    </div>
+
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+ 
+       <h3>General Savings Account</h3>
+      <!-- <div><img src="assets/generalsaving.jpg" alt="" style="height:80px;"></div> -->
+
+      <a href="https://www.krungsri.com/bank/en/PersonalBanking/DepositProducts/SavingsDeposit/GeneralSavingsDeposit.html">
+        <img alt="Krungsri.com" src="assets/generalsaving.jpg" height="80">
+        </a>
+
+      <p>Visit one of our branches and ask to open a General Savings Deposit Account. With an opening balance of only THB 500  you 
+          will be given a passbook to record your deposits and withdrawals....</p>
+
+    <a>NOTE: If you want to know more about Savings Account. Click on the image above.</a>
+</div>
+
+    <div class="card">
+      <h3>Popular Post</h3>
+      <a href="https://www.krungsri.com/bank/en/PersonalBanking/DepositProducts/ForeignCurrencyDeposit.html">
+        <img alt="Krungsri.com" src="assets/FCD.jpg" height="80"> Foreign Currency Deposits
+        </a>
+      <br>
+      <a href="https://www.krungsri.com/bank/en/PersonalBanking/DepositProducts/TimeDeposits.html">
+        <img alt="Krungsri.com" src="assets/taxfree.jpg" height="80"> Krungsri Tax-Free Time Deposit
+        </a>
+      <br>
+      <a href="https://www.krungsri.com/bank/en/PersonalBanking/DepositProducts/PayRollAcccount.html#RemarkLink511">
+        <img alt="Krungsri.com" src="assets/credit&debitcards.jpg" height="93"> PayRoll and Credit & Debit Cards
+        </a>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>If you want to know about Krungsri and want to follow. You can follow in this website.</p>
+    <a href="https://www.krungsri.com/bank/en/home.html"> Krungsri.com</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+    <form class="form-inline">
+
+        <div class="inner"><button type="submit" class="msgBtn" onclick="alert('This page is in progress')">Krungsri Securities</button></div>
+  
+        <div>
+          <a class="OtherServices-item" href="mailto: abc@example.com">for Support Email</a>
+          <a class="OtherServices-item" href="ContactUs: 0987654321">ContactUs: 0987654321</a>
+        </div>
+      </form>
+</div>
+
+</body>
+</html>
+
