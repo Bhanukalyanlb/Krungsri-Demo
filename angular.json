@@ -127,8 +127,5 @@
       }
     }
   },
-  "defaultProject": "demo-app",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "demo-app"
 }
